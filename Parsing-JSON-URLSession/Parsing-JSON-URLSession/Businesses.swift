@@ -15,5 +15,12 @@ struct ResultsWrapperYelp: Codable {
 struct Businesses: Codable {
     let id: String
     let name: String
+    let isClosed: Bool
+    
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case isClosed = "is_closed"
+    }
 }
 
